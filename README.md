@@ -1,4 +1,5 @@
 # CueBright
+### Set colour and brightness of CUE supported keyboards with command line arguments
 This application allows the colour and brightness of a CUE supported Corsair keyboard to be set using simple command-line arguments.
 
 Please note that the only colour mode supported currently is the entire keyboard being the same colour and brightness. Unfortunately the CUE-SDK does not support fetching or modifying the current configuration, so it can only be overridden.
