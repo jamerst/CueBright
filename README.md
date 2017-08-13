@@ -5,6 +5,7 @@ Please note that the only colour mode supported currently is the entire keyboard
 
 ## Syntax
 CueBright.exe [colour] [brightness]
+
 The colour should be in the form of a hex code (#xxxxxx) and the brightness between 0.0 and 1.0 inclusive.
 
 ## Attributions
