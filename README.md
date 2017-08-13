@@ -8,5 +8,8 @@ CueBright.exe [colour] [brightness]
 
 The colour should be in the form of a hex code (#xxxxxx) and the brightness between 0.0 and 1.0 inclusive.
 
+## Download
+Downloads can be found [here](https://github.com/jamerst/CueBright/releases).
+
 ## Attributions
 - CUE-SDK functionality implemented through [CUE.NET](https://github.com/DarthAffe/CUE.NET)
