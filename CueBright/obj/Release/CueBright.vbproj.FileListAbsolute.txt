@@ -24,3 +24,16 @@ S:\Users\James\Projects\CueBright\CueBright\obj\Release\CueBright.vbprojResolveA
 S:\Users\James\Projects\CueBright\CueBright\obj\Release\CueBright.frmMain.resources
 S:\Users\James\Projects\CueBright\CueBright\obj\Release\CueBright.Resources.resources
 S:\Users\James\Projects\CueBright\CueBright\obj\Release\CueBright.vbproj.GenerateResource.Cache
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CueBright.exe.config
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.exe
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.xml
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.pdb
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CueBright.exe
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CueBright.pdb
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CueBright.xml
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CUE.NET.dll
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Release\CUE.NET.xml
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.vbprojResolveAssemblyReference.cache
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.frmMain.resources
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.Resources.resources
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Release\CueBright.vbproj.GenerateResource.Cache

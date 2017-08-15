@@ -119,7 +119,7 @@
   </resheader>
   <data name="lblDesc.Text" xml:space="preserve">
     <value>CueBright © James Tattersall 2017
-Version 1.0 (first release)
+Version 1.0.1 (first release)
 
 This application allows the LEDs of a CUE (Corsair
 Utility Engine) compatible keyboard to be overridden.

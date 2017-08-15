@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyTitle("CueBright")>
 <Assembly: AssemblyDescription("Control color and brightness of LEDs of Corsair keyboards")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("CueBright v1.0")>
+<Assembly: AssemblyProduct("CueBright v1.0.1")>
 <Assembly: AssemblyCopyright("Copyright ©  James Tattersall 2017")>
 <Assembly: AssemblyTrademark("")>
 
@@ -32,4 +32,4 @@ Imports System.Runtime.InteropServices
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
 <Assembly: AssemblyVersion("1.0.0.0")>
-<Assembly: AssemblyFileVersion("1.0.0.0")>
+<Assembly: AssemblyFileVersion("1.0.1.0")>

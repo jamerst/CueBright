@@ -32,3 +32,12 @@ S:\Users\James\Desktop\CueBright\CueBright\bin\Debug\CueBright.exe.config
 S:\Users\James\Desktop\CueBright\CueBright\obj\Debug\CueBright.exe
 S:\Users\James\Desktop\CueBright\CueBright\obj\Debug\CueBright.xml
 S:\Users\James\Desktop\CueBright\CueBright\obj\Debug\CueBright.pdb
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Debug\CueBright.exe
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Debug\CueBright.pdb
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Debug\CueBright.xml
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Debug\CUE.NET.dll
+S:\Users\James\Source\Repos\CueBright\CueBright\bin\Debug\CUE.NET.xml
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Debug\CueBright.vbprojResolveAssemblyReference.cache
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Debug\CueBright.frmMain.resources
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Debug\CueBright.Resources.resources
+S:\Users\James\Source\Repos\CueBright\CueBright\obj\Debug\CueBright.vbproj.GenerateResource.Cache

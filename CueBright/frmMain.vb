@@ -5,6 +5,7 @@ Public Class frmMain
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Visible = False
         arguments = Environment.GetCommandLineArgs
+
         If arguments.Length <> 3 Then
             MsgBox("Error: Incorrect number of parameters supplied." & vbNewLine & "Syntax: " & """" & "CueBright.exe [hex color (#xxxxxx)] [brightness (0.0-1.0)]" & """", MsgBoxStyle.Critical, "Error")
             Application.Exit()
@@ -25,7 +26,23 @@ Public Class frmMain
             End Try
 
             SetLEDs() 'Set LEDs
+
+            AddHandler Microsoft.Win32.SystemEvents.SessionSwitch, AddressOf WindowsLocked
         End If
+    End Sub
+
+    Private Sub WindowsLocked(sender As Object, e As Microsoft.Win32.SessionSwitchEventArgs)
+        If e.Reason = Microsoft.Win32.SessionSwitchReason.SessionUnlock Then 'If event is unlock event
+            Try
+                CueSDK.Reinitialize(False) 'Try to reinitialize
+            Catch
+                WindowsLocked(sender, e) 'Keep trying
+            Finally
+                CueSDK.Reinitialize(True)
+                SetLEDs() 'Gain control and set LEDs
+            End Try
+        End If
+
     End Sub
 
     Private Sub SetLEDs()
