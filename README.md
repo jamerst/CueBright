@@ -14,3 +14,4 @@ Downloads can be found [here](https://github.com/jamerst/CueBright/releases).
 
 ## Attributions
 - CUE-SDK functionality implemented through [CUE.NET](https://github.com/DarthAffe/CUE.NET)
+- Lock state detection provided by Werner van Deventer. See [here](https://brutaldev.com/post/checking-if-the-workstation-is-locked)
