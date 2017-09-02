@@ -2,6 +2,7 @@
 Public Class frmMain
     Dim keyboard As Devices.Keyboard.CorsairKeyboard
     Dim arguments As String()
+
     Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Visible = False
         arguments = Environment.GetCommandLineArgs
@@ -10,39 +11,52 @@ Public Class frmMain
             MsgBox("Error: Incorrect number of parameters supplied." & vbNewLine & "Syntax: " & """" & "CueBright.exe [hex color (#xxxxxx)] [brightness (0.0-1.0)]" & """", MsgBoxStyle.Critical, "Error")
             Application.Exit()
         Else
-            'Initialize CueSDK
-            Try
-                CueSDK.Initialize(True)
-                keyboard = CueSDK.KeyboardSDK
-                If keyboard Is Nothing Then
-                    Throw New Exceptions.WrapperException("No keyboard detected")
-                End If
-            Catch ex As Exceptions.WrapperException
-                MsgBox("Error: Wrapper Exception:  " & ex.Message, MsgBoxStyle.Critical, "Error")
-                Application.Exit()
-            Catch ex As Exceptions.CUEException
-                MsgBox("Error: CUE Exception. Error Code: " + [Enum].GetName(GetType(Devices.Generic.Enums.CorsairError), ex.[Error]), MsgBoxStyle.Critical, "Error")
-                Application.Exit()
-            End Try
+            If DetectLockState.IsWorkstationLocked() = False Then 'If unlocked
+                InitializeSDK()
 
-            SetLEDs() 'Set LEDs
+                SetLEDs() 'Set LEDs
+            End If
 
-            AddHandler Microsoft.Win32.SystemEvents.SessionSwitch, AddressOf WindowsLocked
+            AddHandler Microsoft.Win32.SystemEvents.SessionSwitch, AddressOf WindowsLocked 'Add handler for lock/unlock event
         End If
     End Sub
 
     Private Sub WindowsLocked(sender As Object, e As Microsoft.Win32.SessionSwitchEventArgs)
         If e.Reason = Microsoft.Win32.SessionSwitchReason.SessionUnlock Then 'If event is unlock event
-            Try
-                CueSDK.Reinitialize(False) 'Try to reinitialize
-            Catch
-                WindowsLocked(sender, e) 'Keep trying
-            Finally
-                CueSDK.Reinitialize(True)
-                SetLEDs() 'Gain control and set LEDs
-            End Try
-        End If
+            If CueSDK.IsInitialized() = True Then
+                Try
+                    CueSDK.Reinitialize(False) 'Try to reinitialize
+                Catch
+                    WindowsLocked(sender, e) 'Keep trying
+                Finally
+                    CueSDK.Reinitialize(True)
+                    SetLEDs() 'Gain control and set LEDs
+                End Try
+            Else
+                Do Until CueSDK.IsSDKAvailable(Devices.Generic.Enums.CorsairDeviceType.Keyboard) = True 'Wait until keyboard is detected, yes, I know this is horrible
+                    Threading.Thread.Sleep(50)
+                Loop
+                InitializeSDK()
 
+                SetLEDs() 'Set LEDs
+            End If
+        End If
+    End Sub
+
+    Private Sub InitializeSDK()
+        Try
+            CueSDK.Initialize(True) 'Initialize CueSDK
+            keyboard = CueSDK.KeyboardSDK
+            If keyboard Is Nothing Then
+                Throw New Exceptions.WrapperException("No keyboard detected")
+            End If
+        Catch ex As Exceptions.WrapperException
+            MsgBox("Error: Wrapper Exception:  " & ex.Message, MsgBoxStyle.Critical, "Error")
+            Application.Exit()
+        Catch ex As Exceptions.CUEException
+            MsgBox("Error: CUE Exception. Error Code: " + [Enum].GetName(GetType(Devices.Generic.Enums.CorsairError), ex.[Error]), MsgBoxStyle.Critical, "Error")
+            Application.Exit()
+        End Try
     End Sub
 
     Private Sub SetLEDs()

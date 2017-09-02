@@ -119,7 +119,7 @@
   </resheader>
   <data name="lblDesc.Text" xml:space="preserve">
     <value>CueBright © James Tattersall 2017
-Version 1.0.1 (first release)
+Version 1.0.2
 
 This application allows the LEDs of a CUE (Corsair
 Utility Engine) compatible keyboard to be overridden.
@@ -132,7 +132,8 @@ Unfortunately I am not able to modify or fetch the current configuration of the 
 
 
 CUE-SDK functionality provided by CUE.NET © DarthAffe
-View license </value>
+View license 
+Lock state detection provided by Werner van Deventer of brutaldev.com</value>
   </data>
   <metadata name="TrayIcon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

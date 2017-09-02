@@ -44,7 +44,7 @@ Partial Class frmMain
         Me.lblDesc.Location = New System.Drawing.Point(12, 9)
         Me.lblDesc.MaximumSize = New System.Drawing.Size(375, 0)
         Me.lblDesc.Name = "lblDesc"
-        Me.lblDesc.Size = New System.Drawing.Size(369, 208)
+        Me.lblDesc.Size = New System.Drawing.Size(369, 221)
         Me.lblDesc.TabIndex = 0
         Me.lblDesc.Text = resources.GetString("lblDesc.Text")
         '
@@ -119,7 +119,7 @@ Partial Class frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(384, 222)
+        Me.ClientSize = New System.Drawing.Size(384, 237)
         Me.Controls.Add(Me.pBoxLogo)
         Me.Controls.Add(Me.lnkLblLicense)
         Me.Controls.Add(Me.btnHide)
